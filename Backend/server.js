@@ -5,7 +5,7 @@ const socketIO = require("socket.io");
 const cors = require("cors");
 
 const corsOptions = {
-  origin: "http://localhost:3000", // Replace with your frontend client URL
+  origin: "https://chat-application-rosy-nu.vercel.app/", // frontend
 };
 const app = express();
 app.use(cors(corsOptions));
