@@ -4,7 +4,9 @@ import ChatMessage from "./components/ChatMessage";
 import "./App.css";
 import io from "socket.io-client";
 import ReactScrollToButton from "react-scroll-to-bottom";
-const socket = io("http://localhost:5000", { transports: ["websocket"] });
+const socket = io("https://chat-application-4r98.onrender.com", {
+  transports: ["websocket"],
+});
 const user_list = ["Alan", "Bob", "Carol", "Dean", "Elin"];
 
 function App() {
