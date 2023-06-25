@@ -32,6 +32,7 @@ const ChatInput = ({ onSendMessage, user_list }) => {
           value={message}
           key={message.id}
           id="chatInput"
+          placeholder="Type message..."
           onChange={(e) => setMessage(e.target.value)}
         />
         <button
