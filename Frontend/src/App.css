@@ -1,0 +1,148 @@
+body {
+  font-family: Verdana, geneva, "Seoe UI", sans-serif;
+}
+.chatPage {
+  background-color: rgb(66, 60, 60);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chatContainer {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 860px;
+  height: 95vh;
+  background-color: #373333;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.chatBox {
+  flex: 1;
+  padding: 20px;
+  overflow-y: scroll;
+}
+
+.inputBox {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: transparent;
+}
+.inputBox input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 2px rgba(231, 220, 220, 0.972);
+}
+.inputBox button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+  background-color: #6aa6cb;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.inputBox button:hover {
+  background-color: #2980b9;
+}
+.send-btn {
+  background-color: #2ecc71;
+}
+
+.messageBox {
+  margin-top: 15px;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.avatar span {
+  margin-left: 5px;
+  font-weight: bold;
+  color: white;
+}
+.timestamp {
+  color: #7f7b7b !important;
+  font-size: 0.8rem;
+  margin-top: 5px;
+  margin-left: 20px !important;
+}
+.message-content {
+  display: flex;
+  max-width: 80%;
+  align-items: end;
+}
+
+.message-content span {
+  margin-left: 30px;
+  background-color: #eef0f2fe;
+  color: #020202;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+  padding: 10px;
+  border-radius: 5px !important;
+  margin-bottom: 5px;
+  word-wrap: break-word;
+  box-shadow: 0 2px 1px 4px rgba(0, 0, 0, 0.1);
+}
+.likeBtn {
+  background-color: #677de9;
+  color: #333333;
+  padding: 2px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.likeBtn:hover {
+  color: gray;
+}
+.message-content button:hover {
+  background-color: #cccccc;
+}
+
+.emoji-picker-container {
+  position: absolute;
+  bottom: 90px;
+  right: 20%;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease;
+  z-index: 2;
+}
+
+.show-picker {
+  opacity: 1;
+  transform: translateY(0);
+}
+.emoji-btn {
+  background-color: transparent;
+  transition: transform 0.3s ease;
+}
+.show-picker .emoji-btn {
+  transform: rotate(90deg);
+}
+@media (max-width: 600px) {
+  .chatContainer {
+    width: 95%;
+    height: 100vh;
+  }
+  .emoji-picker-container {
+    bottom: 60px;
+    right: 50px;
+  }
+}
